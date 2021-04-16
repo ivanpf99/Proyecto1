@@ -1,0 +1,10 @@
+package com.elorrieta.primerdia;
+
+public class Clase1 {
+	  public static void main(String[] parametro) {
+	        System.out.println("Hola Mundo");
+	    }
+	
+	}
+
+
