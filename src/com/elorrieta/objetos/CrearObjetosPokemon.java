@@ -1,5 +1,7 @@
 package com.elorrieta.objetos;
 
+import java.util.Scanner;
+
 public class CrearObjetosPokemon {
 
 	public static void main(String[] args) {
@@ -36,22 +38,63 @@ public class CrearObjetosPokemon {
 		p2.setNumero(2);
 		p2.setPrecio(600);
 
-		System.out.println("nombre: " + p2.getNombre());
-		System.out.println("precio: " + p2.getPrecio());
-		System.out.println("brillante: " + p2.isBrillante());
-		System.out.println("numero: " + p2.getNumero());
+		System.out.println("----------------------------------------");
+		System.out.println("nombre: " + p2.getNombre() + " " + p2.getNumero());
 
 		// bulbasur
 
-		Pokemon p3 = new Pokemon();
-		p3.setNombre("bulbasaur");
+		Pokemon p3 = new Pokemon("Bulbasur", 10);
+		p3.setNumero(3);
 		p3.setBrillante(false);
-		p3.setNumero(1);
-		p3.setPrecio(2);
+		System.out.println("----------------------------------------");
+		System.out.println(p3); // no es necesario llamar al metodo .toString()
 
-		System.out.println("nombre: " + p3.getNombre());
-		System.out.println("precio: " + p3.getPrecio());
-		System.out.println("brillante: " + p3.isBrillante());
-		System.out.println("numero: " + p3.getNumero());
+		System.out.println("----------------------------------------");
+		System.out.println("---- Crea tu Pokemon a tu gusto --------");
+		System.out.println("----------------------------------------");
+
+		Scanner sc = new Scanner(System.in);
+
+		// Pedir datos por consola
+		String nombre;
+		do {
+			System.out.println("Dime el nombre:");
+			nombre = sc.nextLine();
+		} while (nombre.length() < 3);
+
+		System.out.println("Dime el precio en euros:");
+		float precio = Float.parseFloat(sc.nextLine());
+// vamos a hecar un bucle do-while
+
+		int numero;
+		do {
+			System.out.println("Numero del pokemon( deve ser mayor que 0:");
+			numero = Integer.parseInt(sc.nextLine());
+		} while (numero <= 0);
+
+		System.out.println("¿ Es Brillante la carta?  escribe S o N");
+		String respuesta = sc.nextLine();
+		// boolean isBrillante = ("s".equalsIgnoreCase(sc.nextLine())) ? true : false;
+		boolean isBrillante = false;
+		if ("s".equalsIgnoreCase(respuesta) || "si".equalsIgnoreCase(respuesta)) {
+			isBrillante = true;
+		}
+
+		// crear el pokemon
+		Pokemon pCustom = new Pokemon();
+		pCustom.setNombre(nombre);
+		pCustom.setPrecio(precio);
+		pCustom.setNumero(numero);
+		pCustom.setBrillante(isBrillante);
+
+		// mostrar por pantalla
+		System.out.println("Ya tienes tu nuevo Pokemon customizado");
+		System.out.println(pCustom);
+		if (pCustom.isBrillante()) {
+			System.out.println("Como es brillante el precio es " + pCustom.getPrecio());
+		}
+
+		sc.close();
+
 	}
 }

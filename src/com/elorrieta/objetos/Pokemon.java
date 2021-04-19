@@ -20,8 +20,14 @@ public class Pokemon {
 	}
 
 	public Pokemon(String nombre) {
-		super();
+		this(); // Llamamos al contructor de arriba
 		this.nombre = nombre;
+	}
+
+	public Pokemon(String nombre, float precio) {
+		this(); // Cambiar siempre super por this
+		this.nombre = nombre;
+		this.precio = precio;
 	}
 
 	public String getNombre() {
@@ -42,7 +48,7 @@ public class Pokemon {
 	}
 
 	public void setPrecio(float precio) {
-		this.precio = precio;
+		this.precio = (precio >= 0) ? precio : 0;
 	}
 
 	public int getNumero() {
@@ -59,6 +65,12 @@ public class Pokemon {
 
 	public void setBrillante(boolean isBrillante) {
 		this.isBrillante = isBrillante;
+	}
+
+	@Override
+	public String toString() {
+		return "Pokemon [nombre=" + nombre + ", precio=" + getPrecio() + ", numero=" + numero + ", isBrillante="
+				+ isBrillante + "]";
 	}
 
 }
