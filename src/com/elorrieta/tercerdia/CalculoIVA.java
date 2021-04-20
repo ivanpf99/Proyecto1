@@ -33,7 +33,7 @@ public class CalculoIVA {
 		}
 
 		// calculamos el iva y lo guardamos en una variable
-		precioConIva = Utilidades.calcularIVA(sueldo, iva);
+		precioConIva = Utilidades.calcularIva(sueldo, iva);
 
 		System.out.println("Con el sueldo: " + sueldo);
 		System.out.println("Aplicamos IVA: " + iva);

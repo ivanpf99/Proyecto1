@@ -1,6 +1,6 @@
 package com.elorrieta.tercerdia;
 
-public class Utilades {
+public class Utilidades {
 
 	// main es un metodo donde vamos a ejecutar el programa
 	public static void main(String[] args) {

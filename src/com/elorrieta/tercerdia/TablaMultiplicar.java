@@ -9,7 +9,7 @@ package com.elorrieta.tercerdia;
  */
 import java.util.Scanner;
 
-public class UtilidadesProblema1 {
+public class TablaMultiplicar {
 
 	public void cargarValor() {
 		Scanner teclado = new Scanner(System.in);

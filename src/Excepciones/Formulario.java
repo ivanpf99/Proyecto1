@@ -1,11 +1,13 @@
 package Excepciones;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-public class ejercicio82problema2 {
+public class Formulario extends JFrame implements ActionListener {
 	private JTextField textfield1, textfield2;
 	private JButton boton1;
 

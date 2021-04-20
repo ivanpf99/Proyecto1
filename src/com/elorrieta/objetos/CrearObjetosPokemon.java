@@ -74,16 +74,15 @@ public class CrearObjetosPokemon {
 
 // vamos a hecar un bucle do-while
 
-		int numero;
+		int numero = 0;
 		do {
 			System.out.println("Numero del pokemon( deve ser mayor que 0:");
-			do {
-				try {
-					numero = Integer.parseInt(sc.nextLine());
-				} catch (Exception e) {
 
-				}
-			} while (condition);
+			try {
+				numero = Integer.parseInt(sc.nextLine());
+			} catch (Exception e) {
+
+			}
 
 		} while (numero <= 0);
 

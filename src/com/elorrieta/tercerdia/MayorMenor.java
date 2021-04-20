@@ -8,7 +8,7 @@ package com.elorrieta.tercerdia;
  */
 import java.util.Scanner;
 
-public class UtilidadesProblema2 {
+public class MayorMenor {
 
 	public void cargarValores() {
 		Scanner teclado = new Scanner(System.in);

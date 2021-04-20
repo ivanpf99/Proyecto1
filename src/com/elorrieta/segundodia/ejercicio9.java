@@ -8,17 +8,20 @@ package com.elorrieta.segundodia;
  */
 
 public class ejercicio9 {
-	int num1 = 1;
-	int num2 = 5;
-	int num3 = 3;
 
-	if(num1>num2&&num1>num3)
-	{
-		System.out.print("numero mas alto es" + num2);
-	}else
-	{
-		System.out.print("numero mas alto es" + num3);
+	public static void main(String[] args) {
+
+		int num1 = 1;
+		int num2 = 5;
+		int num3 = 3;
+
+		if (num1 > num2 && num1 > num3) {
+			System.out.print("numero mas alto es" + num2);
+		} else {
+			System.out.print("numero mas alto es" + num3);
+
+		}
 
 	}
 
-}}
+}
