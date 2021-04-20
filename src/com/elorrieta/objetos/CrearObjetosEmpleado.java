@@ -38,7 +38,13 @@ public class CrearObjetosEmpleado {
 		if (!becario) { // becario != true
 			do {
 				System.out.println("Dime el sueldo en euros ( minimo " + Empleado.SUELDO_MINIMO + ")");
-				sueldo = Float.parseFloat(sc.nextLine());
+				try {
+					sueldo = Float.parseFloat(sc.nextLine());
+				} catch (Exception e) {
+					System.out.println("Formato no correcto, por favor intentelo de nuevo");
+					e.printStackTrace(); // Pinta la traza de la excepicion en pantalla.
+				}
+
 			} while (sueldo < Empleado.SUELDO_MINIMO);
 		}
 

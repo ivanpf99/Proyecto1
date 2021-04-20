@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class CrearObjetosPokemon {
 
 	public static void main(String[] args) {
+		float precio = 0;
 
 		// TODO crear toString en Pokemon
 		// TODO crear la segunda cancion y mostrar por pantalla uno a uno los campos
@@ -63,13 +64,27 @@ public class CrearObjetosPokemon {
 		} while (nombre.length() < 3);
 
 		System.out.println("Dime el precio en euros:");
-		float precio = Float.parseFloat(sc.nextLine());
+		do {
+			try {
+				precio = Float.parseFloat(sc.nextLine());
+			} catch (Exception e) {
+				System.out.println("Formato incorrecto, por favor prueve de nuevo.");
+			}
+		} while (precio <= 0);
+
 // vamos a hecar un bucle do-while
 
 		int numero;
 		do {
 			System.out.println("Numero del pokemon( deve ser mayor que 0:");
-			numero = Integer.parseInt(sc.nextLine());
+			do {
+				try {
+					numero = Integer.parseInt(sc.nextLine());
+				} catch (Exception e) {
+
+				}
+			} while (condition);
+
 		} while (numero <= 0);
 
 		System.out.println("¿ Es Brillante la carta?  escribe S o N");
