@@ -23,9 +23,8 @@ public class Temperaturas {
 
 		// Bucle para pedir temperaturas y sumarlas
 		while (temperatura != SALIR)
-			;
 
-		System.out.println("Dime la temperatura (o 888 para salir):");
+			System.out.println("Dime la temperatura (o 888 para salir):");
 		temperatura = teclado.nextFloat();
 
 		// Realizar operaciones si no queremos SALIR

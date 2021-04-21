@@ -10,6 +10,7 @@ public class CrearObjetoCancion {
 		System.out.println("---------------------");
 
 		Scanner sc = new Scanner(System.in);
+		Cancion c = new Cancion();
 
 		// Pedir los datos
 
@@ -21,29 +22,34 @@ public class CrearObjetoCancion {
 
 		System.out.println("Introduce nombre de la cancion");
 		nombre = sc.nextLine();
+		c.setNombre(nombre);
 
 		// Grupo
 
 		System.out.println("Introduce grupo");
 		grupo = sc.nextLine();
+		c.setGrupo(grupo);
 
 		// Duracion
 
-		System.out.println("Introduce la duracion");
-		duracion = sc.nextInt();
+		System.out.println("Introduce la duracion (No puede exceder los 400)");
+		boolean repetir = true;
+		do {
+			try {
+				duracion = Integer.parseInt(sc.nextLine());
+				c.setDuracion(duracion);
+				repetir = false;
+			} catch (NumberFormatException e) {
+				System.out.println("duraciojn incorecta, debe ser un numero entero");
+			} catch (Exception e) {
+				System.out.println("Duracion incorrecta por favor intentelo de nuevo");
+			}
+		} while (repetir);
 
 		sc.close();
 
-		// Crear Objeto Cancion
-
-		Cancion c1 = new Cancion();
-		c1.setNombre(nombre);
-		c1.setGrupo(grupo);
-		c1.setDuracion(duracion);
-
 		// mostrar por pantalla
-		System.out.println(c1);
+		System.out.println(c);
 
-	} // main
-
+	}// Main
 }
