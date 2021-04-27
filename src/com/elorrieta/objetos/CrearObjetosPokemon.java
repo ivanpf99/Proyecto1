@@ -10,10 +10,6 @@ public class CrearObjetosPokemon {
 
 			float precio = 0;
 
-			// TODO crear toString en Pokemon
-			// TODO crear la segunda cancion y mostrar por pantalla uno a uno los campos
-			// TODO crear un pokemon, pero pedir los datos por pantalla con Scanner
-
 			// vamos a crear objetos o instancias
 
 			Cancion c1 = new Cancion();
