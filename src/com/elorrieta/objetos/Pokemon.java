@@ -84,4 +84,24 @@ public class Pokemon implements Cantarin {
 
 	}
 
+	public void setVida(int i) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public String nombreYvida() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int atacar() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int vida(int ataque1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
