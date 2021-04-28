@@ -1,4 +1,4 @@
-package herencia;
+package com.elorrieta.herencia;
 
 import com.elorrieta.objetos.Cantarin;
 

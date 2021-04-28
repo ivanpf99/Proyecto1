@@ -1,4 +1,4 @@
-package herencia;
+package com.elorrieta.herencia;
 
 public final class Pajaro extends Animal {
 

@@ -1,4 +1,4 @@
-package herencia;
+package com.elorrieta.herencia;
 
 public class PerroPresa extends Perro {
 
