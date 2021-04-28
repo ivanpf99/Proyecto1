@@ -1,7 +1,7 @@
 package com.elorrieta.herencia;
 
 public class PezColor extends Pez {
-	
+
 	private String color;
 
 	public String getColor() {
@@ -10,11 +10,6 @@ public class PezColor extends Pez {
 
 	public void setColor(String color) {
 		this.color = color;
-	}
-
-	
-		
-
 	}
 
 }
