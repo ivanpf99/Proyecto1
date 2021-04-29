@@ -1,6 +1,6 @@
-package com.elorrieta.herencia;
+package com.elorrieta.objetos;
 
-public class Vehiculo {
+public class Vehiculo implements Cantarin, Conducible {
 
 	private String matricula;
 	private String color;
@@ -81,4 +81,33 @@ public class Vehiculo {
 				+ "]";
 	}
 
+	@Override
+	public void cantar() {
+		System.out.println("A Jose Maria hoy le han regalado un coche pepino que se conduce sin las manos");
+
+	}
+
+	@Override
+	public void arrancar() {
+		System.out.println("Brum Brum Brum");
+
+	}
+
+	@Override
+	public void parar() {
+		System.out.println("Brum!!!!");
+
+	}
+
+	@Override
+	public void girar() {
+		System.out.println("Todo a la derecha");
+
+	}
+
+	@Override
+	public void tocarBocina() {
+		System.out.println("Aua Aua");
+
+	}
 }

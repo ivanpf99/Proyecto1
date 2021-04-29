@@ -1,4 +1,4 @@
-package com.elorrieta.herencia;
+package com.elorrieta.objetos;
 
 public final class Avion extends Vehiculo {
 
@@ -23,6 +23,16 @@ public final class Avion extends Vehiculo {
 	}
 
 	public void getAlas() {
+
+	}
+
+	@Override
+	public void arrancar() {
+		System.out.println("Sistemas operativos");
+	}
+
+	public void parar() {
+		System.out.println("El motor esta en llamas, estamos parados aqui");
 
 	}
 

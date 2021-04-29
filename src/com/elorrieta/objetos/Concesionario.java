@@ -1,4 +1,4 @@
-package com.elorrieta.herencia;
+package com.elorrieta.objetos;
 
 import java.util.ArrayList;
 

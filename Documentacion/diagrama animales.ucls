@@ -1,78 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.elorrieta.herencia.PezColor" project="Proyecto1" 
-    file="/Proyecto1/src/com/elorrieta/herencia/PezColor.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="547" y="96"/>    
+  <class id="1" language="java" name="com.elorrieta.objetos.Avion" project="Proyecto1" 
+    file="/Proyecto1/src/com/elorrieta/objetos/Avion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="444" y="423"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.elorrieta.herencia.Pez" project="Proyecto1" 
-    file="/Proyecto1/src/com/elorrieta/herencia/Pez.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="310" y="102"/>    
+  <class id="2" language="java" name="com.elorrieta.objetos.Coche" project="Proyecto1" 
+    file="/Proyecto1/src/com/elorrieta/objetos/Coche.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="226" y="416"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.elorrieta.herencia.PerroPresa" project="Proyecto1" 
-    file="/Proyecto1/src/com/elorrieta/herencia/PerroPresa.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="458" y="263"/>    
+  <class id="3" language="java" name="com.elorrieta.objetos.CocheElectrico" project="Proyecto1" 
+    file="/Proyecto1/src/com/elorrieta/objetos/CocheElectrico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="124" y="687"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="com.elorrieta.herencia.Perro" project="Proyecto1" 
-    file="/Proyecto1/src/com/elorrieta/herencia/Perro.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="323" y="265"/>    
+  <class id="4" language="java" name="com.elorrieta.objetos.CocheGasolina" project="Proyecto1" 
+    file="/Proyecto1/src/com/elorrieta/objetos/CocheGasolina.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="380" y="692"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="com.elorrieta.herencia.Pajaro" project="Proyecto1" 
-    file="/Proyecto1/src/com/elorrieta/herencia/Pajaro.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="360" y="449"/>    
+  <class id="5" language="java" name="com.elorrieta.objetos.Concesionario" project="Proyecto1" 
+    file="/Proyecto1/src/com/elorrieta/objetos/Concesionario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="593" y="152"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.elorrieta.herencia.Animal" project="Proyecto1" 
-    file="/Proyecto1/src/com/elorrieta/herencia/Animal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="123" y="299"/>    
+  <class id="6" language="java" name="com.elorrieta.objetos.Vehiculo" project="Proyecto1" 
+    file="/Proyecto1/src/com/elorrieta/objetos/Vehiculo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="303" y="84"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="7">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <generalization id="8">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
+  <class id="7" language="java" name="com.elorrieta.objetos.VehiculosApp" project="Proyecto1" 
+    file="/Proyecto1/src/com/elorrieta/objetos/VehiculosApp.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="591" y="-5"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="8" language="java" name="com.elorrieta.objetos.Conducible" project="Proyecto1" 
+    file="/Proyecto1/src/com/elorrieta/objetos/Conducible.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="115" x="707" y="-9"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
   <generalization id="9">    
     <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
+    <end type="TARGET" refId="6"/>  
   </generalization>  
   <generalization id="10">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="4"/>  
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
   </generalization>  
   <generalization id="11">    
-    <end type="SOURCE" refId="5"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="12">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="6"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
