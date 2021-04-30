@@ -10,11 +10,6 @@ public class MenuConcesionarioFuncion {
 	private static String opcion = "";
 	private static ArrayList<Vehiculo> stock = new ArrayList<Vehiculo>();
 
-	// variables global para todos los metodos de esta clase
-	private static Scanner sc = new Scanner(System.in);
-	private static String opcion = "";
-	private static ArrayList<Vehiculo> stock = new ArrayList<Vehiculo>();
-
 	public static void main(String[] args) {
 		System.out.println("Bienvenido");
 
@@ -206,7 +201,6 @@ public class MenuConcesionarioFuncion {
 			}
 		}
 		return v;
-
 	}
 
 }
