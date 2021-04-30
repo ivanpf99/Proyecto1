@@ -3,7 +3,12 @@ package com.elorrieta.objetos;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MenuConcesionario {
+public class MenuConcesionarioFuncion {
+
+	// variables global para todos los metodos de esta clase
+	private static Scanner sc = new Scanner(System.in);
+	private static String opcion = "";
+	private static ArrayList<Vehiculo> stock = new ArrayList<Vehiculo>();
 
 	// variables global para todos los metodos de esta clase
 	private static Scanner sc = new Scanner(System.in);
@@ -11,7 +16,6 @@ public class MenuConcesionario {
 	private static ArrayList<Vehiculo> stock = new ArrayList<Vehiculo>();
 
 	public static void main(String[] args) {
-
 		System.out.println("Bienvenido");
 
 		try {
@@ -58,111 +62,34 @@ public class MenuConcesionario {
 		System.out.println("Termina programa");
 	}// main
 
-	private static void cargarVehiculos() {
-
-		stock.add(new Vehiculo("134 CMS", "rojo"));
-
-		Vehiculo v = new Vehiculo();
-		v.setColor("negro");
-		v.setMatricula("2365 JKL");
-		v.setAsientos(5);
-		v.setRuedas(4);
-		stock.add(v);
-
-	}
-
-// Dar de alta un vehiculo
-	private static void darDeAlta() {
-
-		int asientos = 1;
-		int ruedas = 2;
-		Vehiculo v = new Vehiculo();
-
-		System.out.println("Por favor introduzca los datos:");
-
-		// Color
-		System.out.println("Digame el color");
-		String color = sc.nextLine();
-		v.setColor(color);
-
-		// Matricula
-		System.out.println("Digame la matricula");
-		String matricula = sc.nextLine();
-		v.setMatricula(matricula);
-
-		// Asientos
-		do {
-			System.out.println("Numero de asientos( deve ser 1 o mayor :");
-
-			try {
-				asientos = Integer.parseInt(sc.nextLine());
-				v.setAsientos(asientos);
-			} catch (Exception e) {
-				System.out.println("Formato incorrecto, por favor prueve de nuevo.");
-			}
-		} while (asientos <= 1);
-
-		// Ruedas
-		do {
-			System.out.println("Numero de ruedas( deve ser 2 o mayor :");
-
-			try {
-				ruedas = Integer.parseInt(sc.nextLine());
-				v.setRuedas(ruedas);
-			} catch (Exception e) {
-				System.out.println("Formato incorrecto, por favor prueve de nuevo.");
-			}
-		} while (ruedas <= 2);
-
-		// añadirlo en la coleccion 'stock'
-		stock.add(v);
-
-	}
-
-	// dar de baja un vehiculo
 	private static void darDeBaja() {
-		System.out.println("Dar de baja");
+		System.out.println("Dar de Baja");
+		System.out.println("-----------------------------");
 
-		// Pedir los datos del vehiculo
-		System.out.println("Introduzca la matricula del vehiculo");
+		// Pedir todos los datos de un Vehiculo
+		System.out.println("Dime la Matricula:");
 		String matricula = sc.nextLine();
 
-		boolean encontrado = false;
-		for (Vehiculo v : stock) {
-
-			if (matricula.equals(v.getMatricula())) {
-				encontrado = true;
-				stock.remove(v);
-				System.out.println("Vehiculo eliminado con exito");
-				break;
-
-			}
+		Vehiculo vBuscado = buscarPorMatricula(matricula);
+		if (vBuscado == null) {
+			System.out.println("Lo sentimos pero no existe");
+		} else {
+			stock.remove(vBuscado);
+			System.out.println("Vehiculo enviado al desguace");
 		}
-		if (!encontrado) {
-			System.out.println("Vehiculo no encontrado");
-		}
-	}
 
-	// Modificar un vehiculo
+	}// darDeBaja
+
 	private static void modificar() {
-		Vehiculo vm = new Vehiculo(); // VehiculoModificar
-		boolean encontrado = false;
 
 		System.out.println("Modificar");
 		System.out.println("-----------------------------");
 		System.out.println("Dime la Matricula:");
 		String matricula = sc.nextLine();
 
-		// buscar por matricula
-		for (Vehiculo v : stock) {
-			if (matricula.equalsIgnoreCase(v.getMatricula())) {
-				encontrado = true;
-				vm = v;
-				break;
-			}
-		}
+		Vehiculo vm = buscarPorMatricula(matricula);
 
-		if (!encontrado) {
+		if (vm == null) {
 			System.out.println("Vehiculo no encontrado");
 
 		} else {
@@ -175,7 +102,6 @@ public class MenuConcesionario {
 
 			System.out.println("Asientos(" + vm.getAsientos() + "):");
 			boolean error = true;
-
 			do {
 				try {
 					vm.setAsientos(Integer.parseInt(sc.nextLine()));
@@ -185,20 +111,58 @@ public class MenuConcesionario {
 				}
 			} while (error);
 
-			System.out.println("Ruedas(" + vm.getRuedas() + "):");
-
-			do {
-				try {
-					vm.setRuedas(Integer.parseInt(sc.nextLine()));
-					error = false;
-				} catch (Exception e) {
-					System.out.println("es incorrecto, prueba de nuevo:");
-				}
-			} while (error);
+			// TODO Ruedas
 
 		}
 
 	}// modificar
+
+	private static void cargarVehiculos() {
+
+		stock.add(new Vehiculo("134 CMS", "rojo"));
+
+		Vehiculo v = new Vehiculo();
+		v.setColor("negro");
+		v.setMatricula("2365 JKL");
+		stock.add(v);
+
+	}
+
+	private static void darDeAlta() {
+
+		System.out.println("Datos para el nuevo vehiculo");
+		System.out.println("-----------------------------");
+
+		// Pedir todos los datos de un Vehiculo
+		System.out.println("Matricula:");
+		String matricula = sc.nextLine();
+
+		System.out.println("Color:");
+		String color = sc.nextLine();
+
+		System.out.println("Asientos:");
+		boolean error = true;
+		int asientos = 0;
+		do {
+			try {
+				asientos = Integer.parseInt(sc.nextLine());
+				error = false;
+			} catch (Exception e) {
+				System.out.println("es incorrecto, prueba de nuevo:");
+			}
+		} while (error);
+
+		// TODO repetir jugada de arriba, ahora voy a procrastinar
+		System.out.println("Ruedas:");
+		int ruedas = Integer.parseInt(sc.nextLine());
+
+		// crear obejto con esos datos
+		Vehiculo v = new Vehiculo(matricula, color, asientos, ruedas);
+
+		// añadirlo en la coleccion 'stock'
+		stock.add(v);
+
+	}
 
 	private static void listar() {
 		System.out.println("--------------------------------------");
@@ -225,6 +189,23 @@ public class MenuConcesionario {
 		System.out.println("4. modificar");
 		System.out.println("------------------");
 		System.out.println("S- salir");
+	}
+
+	/**
+	 * Busca un Vehiculo por su matricula en el array 'stock'
+	 * 
+	 * @param matricula String matricula a buscar
+	 * @return Vehiculo con datos si encuentra, null si no lo encuentra
+	 */
+	private static Vehiculo buscarPorMatricula(String matricula) {
+		Vehiculo v = null;
+		for (Vehiculo vi : stock) {
+			if (matricula.equalsIgnoreCase(vi.getMatricula())) {
+				v = vi;
+				break;
+			}
+		}
+		return v;
 
 	}
 
