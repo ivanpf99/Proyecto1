@@ -1,6 +1,6 @@
 package com.elorrieta.objetos;
 
-public class Pokemon implements Cantarin {
+public class Pokemon {
 
 	// atributos
 	private int id;
@@ -76,12 +76,6 @@ public class Pokemon implements Cantarin {
 	public String toString() {
 		return "Pokemon [nombre=" + nombre + ", precio=" + getPrecio() + ", numero=" + numero + ", isBrillante="
 				+ isBrillante + "]";
-	}
-
-	@Override
-	public void cantar() {
-		// TODO Auto-generated method stub
-
 	}
 
 	public void setVida(int i) {
